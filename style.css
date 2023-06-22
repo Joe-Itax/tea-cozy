@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /*box-shadow: 0 0 0 2px blue inset;*/
+}
+
+body {
+  font-family: Helvetica, sans-serif;
+  color: seashell;
+  background-color: black;
+  opacity: 0.9;
+  font-size: 22px;
+}
+
+/*******************Section header**********************/
+
+header {
+  width: 100%;
+  height: 69px;
+  background-color: #000;
+  position: fixed;
+  z-index: 100;
+}
+
+/************Section logo du site*******************/
+
+header .logo {
+  float: left;
+  height: 50px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+/***********Section navbar********************/
+
+nav {
+  float: right;
+  padding-right: 10px;
+  padding-top: 20px;
+}
+
+nav ul {
+  display: flex;
+}
+
+nav ul li {
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: underline;
+  color: seashell;
+  padding: 0.6rem;
+  margin: 2px;
+}
+
+nav ul li a:hover {
+  background: #d92950;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+nav .checkbtn,
+nav .uncheckbtn {
+  font-size: 1.9rem;
+  color: seashell;
+  float: right;
+  margin-right: 1rem;
+  cursor: pointer;
+  display: none;
+}
+
+.check {
+  display: none;
+}
+
+/***************Media pour gérer la responsivité de la navbar*/
+
+@media screen and (max-width: 600px) {
+  nav .checkbtn {
+    display: block;
+  }
+
+  nav ul {
+    position: fixed;
+    width: 80%;
+    height: 100vh;
+    background-color: #d92950;
+    top: 69px;
+    right: -100%;
+    text-align: center;
+    transition: all 0.5s;
+  }
+
+  nav ul li {
+    display: block;
+  }
+
+  nav ul li a {
+    padding: 1rem;
+  }
+
+  #check:checked ~ .checkbtn {
+    display: none;
+  }
+
+  #check:checked ~ .uncheckbtn {
+    display: block;
+  }
+
+  #check:checked ~ ul {
+    right: 0%;
+  }
+}
+
+/********************Section Main***************/
+main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  padding-top: 69px;
+}
+
+/************Section Our Mission*/
+.our-mission {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.7),
+      rgba(0, 0, 0, 0.7)
+    ),
+    url('Img/img-mission-background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  width: 1200px;
+}
+
+.our-mission .our-mission-title {
+  background: #000;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  gap: 20px;
+}
+
+/****************Section featured-tea***********/
