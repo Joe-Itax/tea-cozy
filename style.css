@@ -92,33 +92,35 @@ nav .uncheckbtn {
 
   nav ul {
     position: fixed;
-    width: 80%;
+    width: 90%;
     height: 100vh;
     background-color: #d92950;
     top: 69px;
     right: -100%;
     text-align: center;
     transition: all 0.5s;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
   }
 
   nav ul li {
-    display: column;
-    background-color: blue;
+    padding-top: 3rem;
   }
 
   nav ul li a {
     padding: 1rem;
   }
 
-  #check:checked ~ .checkbtn {
+  #check:checked~.checkbtn {
     display: none;
   }
 
-  #check:checked ~ .uncheckbtn {
+  #check:checked~.uncheckbtn {
     display: block;
   }
 
-  #check:checked ~ ul {
+  #check:checked~ul {
     right: 0%;
   }
 }
@@ -139,14 +141,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-      to bottom,
+  background-image: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.4)
-    ),
+      rgba(0, 0, 0, 0.4)),
     url('Img/img-mission-background.jpg');
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
   width: 95%;
@@ -178,11 +177,13 @@ main {
 }
 
 .featured-tea h2 {
+  text-align: center;
   margin-bottom: 1rem;
 }
 
 .featured-tea h4 {
   margin-bottom: 0.6rem;
+  text-align: center;
 }
 
 .featured-tea-img {
@@ -193,17 +194,17 @@ main {
   margin-top: 10px;
 }
 
-.featured-tea-img > div {
+.featured-tea-img>div {
   margin-bottom: 10px;
 }
 
-.featured-tea-img > div img {
+.featured-tea-img>div img {
   width: 300px;
   height: 200px;
   margin-bottom: 10px;
 }
 
-.featured-tea-img > div p {
+.featured-tea-img>div p {
   text-align: center;
 }
 
@@ -213,14 +214,11 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-image: linear-gradient(
-      to bottom,
+  background-image: linear-gradient(to bottom,
       rgba(0, 0, 0, 0.2),
-      rgba(0, 0, 0, 0.4)
-    ),
+      rgba(0, 0, 0, 0.4)),
     url('Img/img-mission-background.jpg');
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   height: 700px;
   width: 95%;
@@ -239,12 +237,11 @@ main {
   background-color: #000;
   text-align: center;
   opacity: 1;
-  padding: 1rem;
 }
 
-.location .box-location .different-box-location > p,
+.location .box-location .different-box-location>p,
 h3 {
-  padding: 1rem;
+  padding: 1.5rem 0 1.5rem 0;
 }
 
 /**/
@@ -267,11 +264,11 @@ footer .footer-contact {
   padding: 1rem;
 }
 
-footer .footer-contact > h2 {
+footer .footer-contact>h2 {
   margin-bottom: 2rem;
 }
 
-footer .footer-contact > *:not(h2) {
+footer .footer-contact>*:not(h2) {
   padding: 1rem;
 }
 
@@ -283,6 +280,6 @@ footer .footer-copy {
 @media screen and (max-width: 700px) {
   footer .footer-copy {
     text-align: center;
-    margin: 2rem auto 1rem 20px;
+    margin: 2rem auto 1rem auto;
   }
 }
